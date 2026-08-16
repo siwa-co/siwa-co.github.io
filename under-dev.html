@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Development | Ibrahim Hassan</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="This page is currently under development. Great things take time! Check back soon for exciting AI and machine learning content.">
+    <meta name="keywords" content="AI Development, Machine Learning Projects, Coming Soon">
+    <meta name="author" content="Ibrahim Hassan">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Under Development - Ibrahim Hassan">
+    <meta property="og:description"
+        content="This page is currently being crafted with the same attention to detail and innovation that goes into every AI project. Great things take time!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="D:\inboxibrahim.github.io\under-dev.html">
+    <meta property="og:image" content="D:\inboxibrahim.github.io\assests\Original.png">
+    <meta property="og:image:alt" content="Under Development">
+    <meta property="og:site_name" content="Ibrahim Hassan Portfolio">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Under Development - Ibrahim Hassan">
+    <meta name="twitter:description"
+        content="This page is currently being crafted with attention to detail. Check back soon!">
+    <meta name="twitter:image" content="D:\inboxibrahim.github.io\assests\Original.png">
+
+    <link rel="icon" type="image/x-icon" href="assests/favicon.ico">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Page-specific styles for the under-development experience */
+
+        .development-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 100px 20px 60px;
+            position: relative;
+        }
+
+        /* Animated background grid */
+        .bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @keyframes gridMove {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(50px, 50px);
+            }
+        }
+
+        /* Floating code snippets */
+        .code-float {
+            position: absolute;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            opacity: 0.15;
+            animation: codeFloat 15s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .code-float:nth-child(2) {
+            top: 15%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .code-float:nth-child(3) {
+            top: 25%;
+            right: 15%;
+            animation-delay: 3s;
+        }
+
+        .code-float:nth-child(4) {
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 6s;
+        }
+
+        .code-float:nth-child(5) {
+            bottom: 20%;
+            right: 10%;
+            animation-delay: 9s;
+        }
+
+        .code-float:nth-child(6) {
+            top: 50%;
+            left: 5%;
+            animation-delay: 12s;
+        }
+
+        @keyframes codeFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.1;
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(5deg);
+                opacity: 0.28;
+            }
+        }
+
+        /* Content card */
+        .development-content {
+            text-align: center;
+            max-width: 680px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Pulsing icon */
+        .dev-icon {
+            font-size: 5.5rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+            animation: devPulse 2.5s ease-in-out infinite;
+            filter: drop-shadow(0 0 24px rgba(0, 212, 255, 0.35));
+            cursor: default;
+        }
+
+        @keyframes devPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.06);
+            }
+        }
+
+        .dev-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0;
+            animation: fadeInUp 0.9s var(--ease-out-expo) 0.3s forwards;
+        }
+
+        .dev-subtitle {
+            font-size: var(--fs-lg);
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.9s var(--ease-out-expo) 0.5s forwards;
+        }
+
+        .dev-message {
+            font-size: var(--fs-md);
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.75;
+            opacity: 0;
+            animation: fadeInUp 0.9s var(--ease-out-expo) 0.7s forwards;
+        }
+
+        /* Feature highlights */
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 0.9s var(--ease-out-expo) 0.9s forwards;
+        }
+
+        .highlight-card {
+            background: var(--surface-1);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 1.25rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(0, 212, 255, 0.07) 0%, transparent 65%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .highlight-card:hover::before {
+            opacity: 1;
+        }
+
+        .highlight-card:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .highlight-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .highlight-card h3 {
+            color: var(--text-primary);
+            font-size: var(--fs-sm);
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight-card p {
+            color: var(--text-muted);
+            font-size: var(--fs-xs);
+            line-height: 1.5;
+        }
+
+        /* Action buttons */
+        .action-buttons {
+            display: flex;
+            gap: 1.25rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 0.9s var(--ease-out-expo) 1.1s forwards;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 2rem;
+            border-radius: var(--radius-pill);
+            font-weight: 600;
+            font-size: var(--fs-base);
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: #fff;
+            box-shadow: 0 4px 18px rgba(0, 212, 255, 0.28);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            transform: translateX(100%);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--surface-2);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--surface-3);
+            border-color: var(--border-accent);
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .development-container {
+                padding: 120px 20px 40px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 260px;
+                justify-content: center;
+            }
+
+            .code-float {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">PK</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="all-projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://github.com/siwa-co" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="development-container">
+        <div class="bg-grid"></div>
+
+        <!-- Floating code elements -->
+        <div class="code-float">function buildAwesome() {</div>
+        <div class="code-float">import tensorflow as tf</div>
+        <div class="code-float">const magic = await AI.create()</div>
+        <div class="code-float">model.train(amazing_data)</div>
+        <div class="code-float">return innovation;</div>
+
+        <div class="development-content">
+            <div class="dev-icon" id="devIcon">🚧</div>
+            <h1 class="dev-title">Under Development</h1>
+            <p class="dev-subtitle">Building Something Amazing</p>
+            <p class="dev-message">
+                This page is currently being crafted with the same attention to detail and innovation
+                that goes into every AI project. Great things take time, and this will be worth the wait!
+            </p>
+
+            <!-- What's coming highlight cards -->
+            <div class="highlights">
+                <div class="highlight-card">
+                    <span class="highlight-icon">🤖</span>
+                    <h3>AI-Powered Core</h3>
+                    <p>Advanced ML models trained for precision and performance</p>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-icon">⚡</span>
+                    <h3>Production-Ready</h3>
+                    <p>Scalable architecture built for real-world deployment</p>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-icon">🔬</span>
+                    <h3>Research-Driven</h3>
+                    <p>Grounded in the latest papers and best practices</p>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="all-projects.html" class="btn btn-primary">
+                    <span>🗂️</span> View All Projects
+                </a>
+                <a href="index.html" class="btn btn-secondary">
+                    <span>🏠</span> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="copyright-year"></span> Ibrahim Hassan. Built with passion for AI &amp; open source
+                community.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = navLinks.classList.toggle('active');
+            mobileMenu.setAttribute('aria-expanded', isOpen);
+            mobileMenu.textContent = isOpen ? '✕' : '☰';
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenu.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenu.setAttribute('aria-expanded', false);
+                mobileMenu.textContent = '☰';
+            }
+        });
+
+        // Scroll-aware nav
+        const navEl = document.querySelector('nav');
+        const onScroll = () => {
+            if (window.scrollY > 20) navEl.classList.add('scrolled');
+            else navEl.classList.remove('scrolled');
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // Logo glitch on hover
+        const logo = document.querySelector('.logo');
+        logo.addEventListener('mouseenter', () => { logo.style.animation = 'glitch 0.3s ease-in-out'; });
+        logo.addEventListener('animationend', () => { logo.style.animation = ''; });
+
+        // Pointer-tracked glow on highlight cards
+        document.querySelectorAll('.highlight-card').forEach(card => {
+            card.addEventListener('pointermove', (e) => {
+                const r = card.getBoundingClientRect();
+                card.style.setProperty('--glow-x', ((e.clientX - r.left) / r.width) * 100 + '%');
+                card.style.setProperty('--glow-y', ((e.clientY - r.top) / r.height) * 100 + '%');
+            });
+        });
+
+        // Easter egg: click the icon 5 times
+        let clickCount = 0;
+        const devIcon = document.getElementById('devIcon');
+
+        devIcon.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 5) {
+                devIcon.style.transition = 'transform 0.6s var(--ease-spring, cubic-bezier(0.34,1.56,0.64,1))';
+                devIcon.style.transform = 'scale(1.3) rotate(360deg)';
+                devIcon.textContent = '🎉';
+
+                const colors = ['#00d4ff', '#0099cc', '#4ade80', '#fbbf24', '#7c5cff'];
+                for (let i = 0; i < 24; i++) {
+                    const dot = document.createElement('div');
+                    dot.style.cssText = `
+                        position:fixed; width:8px; height:8px; border-radius:50%;
+                        background:${colors[Math.floor(Math.random() * colors.length)]};
+                        left:${Math.random() * 100}vw; top:${Math.random() * 40}vh;
+                        animation:confetti 1.8s ease-out forwards; z-index:9999;
+                        pointer-events:none;
+                    `;
+                    document.body.appendChild(dot);
+                    setTimeout(() => dot.remove(), 1900);
+                }
+
+                setTimeout(() => {
+                    devIcon.style.transform = '';
+                    devIcon.textContent = '🚧';
+                    clickCount = 0;
+                }, 3000);
+            }
+        });
+
+        // Confetti keyframe (injected once)
+        const s = document.createElement('style');
+        s.textContent = `@keyframes confetti {
+            0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(60vh) rotate(720deg); opacity: 0; }
+        }`;
+        document.head.appendChild(s);
+
+        // Copyright year
+        window.addEventListener('load', () => {
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+
+</html>

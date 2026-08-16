@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Hassan - AI Engineer & Solution Architect</title>
+
+    <meta name="description"
+        content="Ibrahim Hassan - AI Engineer specializing in LLMs, Speech AI, OCR, and scalable ML systems. Sharing open-source projects and knowledge on building end-to-end AI products.">
+    <meta name="keywords"
+        content="AI Engineer, Machine Learning, LLM, Speech AI, OCR, RAG, Python, PyTorch, FastAPI, Document AI, AI Portfolio">
+    <meta name="author" content="Ibrahim Hassan">
+
+    <meta property="og:title" content="Ibrahim Hassan - AI Engineer & Solution Architect">
+    <meta property="og:description"
+        content="AI Engineer specializing in LLMs, Speech AI, OCR, and scalable ML systems. Sharing open-source projects and knowledge on building end-to-end AI products.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inboxibrahim.github.io/">
+    <meta property="og:image" content="https://inboxibrahim.github.io/assests/Original.png">
+    <meta property="og:image:alt" content="Ibrahim Hassan - AI Engineer Portfolio">
+    <meta property="og:site_name" content="Ibrahim Hassan Portfolio">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ibrahim Hassan - AI Engineer & Solution Architect">
+    <meta name="twitter:description"
+        content="AI Engineer specializing in LLMs, Speech AI, OCR, and scalable ML systems.">
+    <meta name="twitter:image" content="https://inboxibrahim.github.io/assests/Original.png">
+    <meta name="twitter:image:alt" content="Ibrahim Hassan - AI Engineer Portfolio">
+
+    <link rel="canonical" href="https://inboxibrahim.github.io/">
+    <link rel="icon" type="image/x-icon" href="assests/favicon.ico">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="landing-body">
+
+    <div class="landing">
+
+        <!-- Top: logo only -->
+        <div class="landing-top">
+            <span class="logo">IH</span>
+        </div>
+
+        <!-- Center: hero content -->
+        <main class="landing-main">
+            <div class="landing-content">
+                <h1 class="landing-title">Ibrahim Hassan</h1>
+                <p class="landing-subtitle">AI Engineer &amp; Solution Architect</p>
+                <p class="landing-desc">
+                    I build end-to-end AI products, from first prototype to production. Deep into speech AI, OCR, and
+                    LLMs - and I love sharing what I learn through open-source.
+                </p>
+                <div class="landing-actions">
+                    <a href="all-projects.html" class="cta-button">View My Work</a>
+                    <span class="actions-divider" aria-hidden="true"></span>
+                    <a href="about.html" class="landing-link">About</a>
+                    <a href="https://github.com/siwa-co" target="_blank" rel="noopener noreferrer"
+                        class="landing-link landing-link--ext">GitHub&nbsp;↗</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom: copyright -->
+        <footer class="landing-footer">
+            <p>&copy; <span id="copyright-year"></span> Ibrahim Hassan. Built with passion for AI &amp; open source.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Typing effect on hero title
+        function typeWriter(element, text, speed = 55) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML = text.slice(0, i + 1) + '<span style="border-right:2px solid #00d4ff;margin-left:1px;animation:blink 0.7s step-end infinite;"></span>';
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    setTimeout(() => { element.innerHTML = text; }, 800);
+                }
+            }
+            type();
+        }
+
+        window.addEventListener('load', () => {
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            setTimeout(() => typeWriter(document.querySelector('.landing-title'), 'Praveen Kumar', 55), 300);
+        });
+
+        // Logo glitch
+        const logo = document.querySelector('.logo');
+        logo.addEventListener('mouseenter', () => { logo.style.animation = 'glitch 0.3s ease-in-out'; });
+        logo.addEventListener('animationend', () => { logo.style.animation = ''; });
+    </script>
+    <style>
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</body>
+
+</html>
