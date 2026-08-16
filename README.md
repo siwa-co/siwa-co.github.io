@@ -2,7 +2,7 @@
 
 A hand-crafted, dark-themed developer portfolio built from scratch with vanilla HTML, CSS, and JavaScript. No frameworks, no build tools, no dependencies.
 
-**Live:** [inboxibrahim.github.io](https://inboxibrahim.github.io)
+**Live:** [siwa-co.github.io](https://siwa-co.github.io)
 
 ## Overview
 
@@ -24,7 +24,7 @@ Personal portfolio for Ibrahim Hassan - AI Engineer & Solution Architect special
 ## Project Structure
 
 ```
-inboxibrahim.github.io/
+siwa-co.github.io/
 ├── index.html              # Landing page
 ├── index.css               # Shared design system (single stylesheet)
 ├── all-projects.html       # Project showcase grid
