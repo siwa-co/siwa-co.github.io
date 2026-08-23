@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bono Agent Main | Ibrahim Hassan</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Bono Agent Main: Your own AI assistant on your laptop. Built with a clear focus on Harness, Loop, Memory, and Eval/LLM-Ops without complex frameworks.">
+    <meta name="keywords" content="AI, Machine Learning, Language Models, Agents, LLM, Python, SQLite">
+    <meta name="author" content="Ibrahim Hassan">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Bono Agent Main">
+    <meta property="og:description"
+        content="Bono Agent Main: Your own AI assistant on your laptop. Built with a clear focus on Harness, Loop, Memory, and Eval/LLM-Ops without complex frameworks.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://siwa-co.github.io/projects/project.html">
+    <meta property="og:image"
+        content="https://siwa-co.github.io/projects/resources/project/architecture-whiteboard.png">
+    <meta property="og:image:alt" content="Bono Agent Main">
+    <meta property="og:site_name" content="Ibrahim Hassan Portfolio">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bono Agent Main">
+    <meta name="twitter:description"
+        content="Bono Agent Main: Your own AI assistant on your laptop. Built with a clear focus on Harness, Loop, Memory, and Eval/LLM-Ops without complex frameworks.">
+    <meta name="twitter:image"
+        content="https://siwa-co.github.io/projects/resources/project/architecture-whiteboard.png">
+    <meta name="twitter:image:alt" content="Bono Agent Main">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://siwa-co.github.io/projects/project.html">
+
+    <link rel="icon" type="image/x-icon" href="../assests/favicon.ico">
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='../index.html'" style="cursor: pointer;">IH</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../all-projects.html">Projects</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="https://github.com/siwa-co" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Project Page - Portfolio Website -->
+    <div class="page-container active">
+        <div class="page-header">
+            <div class="container">
+                <a href="../all-projects.html" class="back-button">← Back to Projects</a>
+                <h1 class="page-title">Bono Agent Main</h1>
+                <div class="page-meta">
+                    <div class="meta-item">
+                        <span>📅</span>
+                        <span>Completed: 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <span>⏱️</span>
+                        <span>Actively Maintained</span>
+                    </div>
+                    <div class="meta-item">
+                        <span>👥</span>
+                        <span>Team Size: Solo</span>
+                    </div>
+                    <div class="meta-item">
+                        <span>🏷️</span>
+                        <span>Python • APIs • LLMs • SQLite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Project Overview</h2>
+            <p>
+                <strong>Your own AI assistant. On your laptop. In code you can read in an afternoon.</strong>
+            </p>
+            <p>
+                Meet <strong>Bono</strong> — a local-first personal assistant that shows the four pillars behind every
+                serious agent: <strong>Harness · Loop · Memory · Eval/LLM-Ops</strong>. No frameworks hiding the good
+                parts. Built for learning, exploring, and complete control over your AI assistant.
+            </p>
+
+            <div style="text-align: center; margin: 2rem 0;">
+                <img src="./resources/project/architecture-whiteboard.png" alt="Bono Agent - Architecture Whiteboard"
+                    style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
+            </div>
+
+            <h2>Core Principles</h2>
+            <ul>
+                <li><strong>Local-first.</strong> Your memory is one SQLite file. Open it. Read it. It's yours.</li>
+                <li><strong>Memory is the hero.</strong> Semantic + episodic + procedural — with a gate that decides
+                    <em>whether</em> to remember, and a pass that decides <em>what</em> to keep.
+                </li>
+                <li><strong>The loop is ~95 lines</strong> of plain Python. Step through it.</li>
+                <li><strong>Watch it think.</strong> A local dashboard lights up every message as it flows through the
+                    harness.</li>
+                <li><strong>Eval built in.</strong> Deterministic tests <em>and</em> LLM-as-judge, side by side, with a
+                    release gate.</li>
+            </ul>
+
+            <h2>Running the Project</h2>
+            <p>You can run Bono easily after cloning the repo. The dashboard is the recommended way to experience it.
+            </p>
+
+            <div style="overflow-x: auto;">
+                <table
+                    style="width: 100%; border-collapse: collapse; margin: 2rem 0; text-align: left; color: var(--text-primary);">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--border-color);">
+                            <th style="padding: 1rem; color: var(--accent-color);">Command</th>
+                            <th style="padding: 1rem; color: var(--accent-color);">When</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--secondary-bg);">
+                                <code>uv run bono dashboard</code>
+                            </td>
+                            <td style="padding: 1rem; background: var(--secondary-bg);">quick start, zero activation
+                                (recommended)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--primary-bg);">
+                                <code>source .venv/bin/activate</code> → <code>bono dashboard</code>
+                            </td>
+                            <td style="padding: 1rem; background: var(--primary-bg);">activate once, bare
+                                <code>bono</code> all session
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--secondary-bg);"><code>uv tool install .</code> →
+                                <code>bono dashboard</code>
+                            </td>
+                            <td style="padding: 1rem; background: var(--secondary-bg);">install <code>bono</code>
+                                <strong>globally</strong>, forever
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>The Dashboard Workspace</h2>
+            <p>The local dashboard web server provides extreme visibility into what the agent is doing at every turn.
+            </p>
+
+            <div style="overflow-x: auto;">
+                <table
+                    style="width: 100%; border-collapse: collapse; margin: 2rem 0; text-align: left; color: var(--text-primary);">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--border-color);">
+                            <th style="padding: 1rem; color: var(--accent-color);">Tab</th>
+                            <th style="padding: 1rem; color: var(--accent-color);">What you see</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--secondary-bg);"><strong>Overview</strong></td>
+                            <td style="padding: 1rem; background: var(--secondary-bg);">cost, latency, the gate
+                                skip/retrieve split, the clickable architecture map</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--primary-bg);"><strong>Gateway</strong></td>
+                            <td style="padding: 1rem; background: var(--primary-bg);">one conversation across every
+                                channel, each message tagged by source</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--secondary-bg);"><strong>Loop</strong></td>
+                            <td style="padding: 1rem; background: var(--secondary-bg);">every turn with its gate
+                                decision, tool calls, tokens, and cost</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--primary-bg);"><strong>Graph</strong></td>
+                            <td style="padding: 1rem; background: var(--primary-bg);">graph workflows: the live triage
+                                topology + which door each turn took</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--secondary-bg);"><strong>Memory</strong></td>
+                            <td style="padding: 1rem; background: var(--secondary-bg);">sub-tabs per pillar — semantic
+                                facts, episodes, editable skills + SOUL, consolidation</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--primary-bg);"><strong>Tools</strong></td>
+                            <td style="padding: 1rem; background: var(--primary-bg);">the agent's available tools, its
+                                results, and MCP connectors</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--secondary-bg);"><strong>Data</strong></td>
+                            <td style="padding: 1rem; background: var(--secondary-bg);">a live SQLite browser: per-table
+                                tabs, schema, and a read-only SQL console over <code>state.db</code></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--primary-bg);"><strong>Ops</strong></td>
+                            <td style="padding: 1rem; background: var(--primary-bg);">eval verdict + history, the gate
+                                decisions, slowest turns, and inline JSONL traces</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Things to Try</h2>
+            <p>Interacting with Bono is the best way to understand the underlying pillars. Type these in the chat dock
+                and watch the dashboard light up.</p>
+
+            <div style="overflow-x: auto;">
+                <table
+                    style="width: 100%; border-collapse: collapse; margin: 2rem 0; text-align: left; color: var(--text-primary);">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--border-color);">
+                            <th style="padding: 1rem; color: var(--accent-color);">Try this</th>
+                            <th style="padding: 1rem; color: var(--accent-color);">What it shows</th>
+                            <th style="padding: 1rem; color: var(--accent-color);">Where to watch</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--secondary-bg);"><em>"Schedule a tennis game with
+                                    Raj this Saturday at 8am"</em></td>
+                            <td style="padding: 1rem; background: var(--secondary-bg);">the Loop calls a tool
+                                (<code>create_event</code>)</td>
+                            <td style="padding: 1rem; background: var(--secondary-bg);">the <strong>LOOP</strong> box
+                                pulses; <strong>Loop</strong> tab shows <code>iter 2</code></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--primary-bg);"><em>"What's on my calendar
+                                    today?"</em></td>
+                            <td style="padding: 1rem; background: var(--primary-bg);">reading the calendar
+                                (<code>list_events</code>)</td>
+                            <td style="padding: 1rem; background: var(--primary-bg);">it answers from
+                                <code>state.db</code>, no made-up events
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--secondary-bg);"><em>"When am I swimming with
+                                    Sergey?"</em> then <em>"what's 12 × 8?"</em></td>
+                            <td style="padding: 1rem; background: var(--secondary-bg);">the <strong>retrieval
+                                    gate</strong> — retrieve vs skip</td>
+                            <td style="padding: 1rem; background: var(--secondary-bg);">Overview gate bar;
+                                <strong>Ops</strong> shows the per-turn decision
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--primary-bg);"><em>"Remember that Raj prefers
+                                    evening games"</em></td>
+                            <td style="padding: 1rem; background: var(--primary-bg);">memory self-management
+                                (<code>save_note</code>)</td>
+                            <td style="padding: 1rem; background: var(--primary-bg);"><strong>Memory ▸ Semantic</strong>
+                                gains a fact; <code>MEMORY.md</code> updates</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--secondary-bg);"><em>"Search for the World Cup
+                                    games still left to play and add each one to my calendar"</em></td>
+                            <td style="padding: 1rem; background: var(--secondary-bg);"><strong>multi-tool loop
+                                    engineering</strong></td>
+                            <td style="padding: 1rem; background: var(--secondary-bg);"><strong>Loop</strong> tab shows
+                                <code>iter 8</code>: <code>search_web</code> × N → <code>create_event</code> × N
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 1rem; background: var(--primary-bg);">chat from <code>make run</code>
+                                <strong>and</strong> the browser
+                            </td>
+                            <td style="padding: 1rem; background: var(--primary-bg);">one brain, many gateways</td>
+                            <td style="padding: 1rem; background: var(--primary-bg);">the <strong>Gateway</strong> tab
+                                tags each message <code>cli</code> / <code>dashboard</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>How is this different from ChatGPT / Claude Desktop?</h2>
+            <p>
+                Those are products you <em>use</em>. This is a codebase you <em>own</em> — the loop, the memory schema,
+                the
+                gate, the eval harness, all yours to read and change. Understand this repo, and you understand
+                what the products do under the hood.
+            </p>
+            <p>
+                Versus the big open-source assistants (OpenClaw, Hermes)? Same architecture, 1/100th the code.
+                Products vs. a readable blueprint.
+            </p>
+
+            <h2>Eval, tracing & catching bugs</h2>
+            <p>Deterministic tests are run with pytest tests, while LLM-as-judge ones use DeepEval. Keeping them apart
+                is the whole point — conflating "did it do the thing" (a unit test) with "was it any good" (a scored
+                judgement) is the most common eval mistake.</p>
+
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="code-language">Eval Commands</span>
+                    <button class="copy-button">Copy</button>
+                </div>
+                <pre><code>make eval          # deterministic: "did the right tool fire?" — 0 or 1, no model judges it
+make eval-judge    # LLM-as-judge: "was the reply helpful?" — a scored %, needs a key
+make gate          # the release gate: deterministic must pass 100%, judge must clear threshold</code></pre>
+            </div>
+
+            <div
+                style="margin-top: 3rem; padding: 2rem; background: var(--secondary-bg); border-radius: 15px; border: 1px solid var(--border-color);">
+                <h3 style="margin-top: 0;">Resources & Links</h3>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; margin-bottom: 2rem;">
+                    <a href="https://github.com/siwa-co/bono-agent-main" class="demo-button" style="margin: 0;"
+                        target="_blank">GitHub Repository</a>
+                </div>
+
+                <h4>Tags:</h4>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+                    <span class="tech-tag">#Python</span>
+                    <span class="tech-tag">#LLMs</span>
+                    <span class="tech-tag">#AI Agents</span>
+                    <span class="tech-tag">#LocallyHosted</span>
+                    <span class="tech-tag">#OpenSource</span>
+                    <span class="tech-tag">#SQLite</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="margin-top: 4rem;">
+        <div class="container">
+            <p>&copy; <span id="copyright-year"></span> Ibrahim Hassan. Built with passion for AI & open source
+                community.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function (e) {
+            if (e.target.classList.contains('copy-button')) {
+                const codeBlock = e.target.closest('.code-block');
+                const code = codeBlock.querySelector('pre').textContent;
+
+                navigator.clipboard.writeText(code).then(() => {
+                    e.target.textContent = 'Copied!';
+                    setTimeout(() => {
+                        e.target.textContent = 'Copy';
+                    }, 2000);
+                });
+            }
+        });
+
+        const navEl = document.querySelector('nav');
+        const onNavScroll = () => {
+            if (window.scrollY > 20) navEl.classList.add('scrolled');
+            else navEl.classList.remove('scrolled');
+        };
+        window.addEventListener('scroll', onNavScroll, { passive: true });
+        onNavScroll();
+
+        window.addEventListener('load', function () {
+            const yearElement = document.getElementById('copyright-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+
+</html>
